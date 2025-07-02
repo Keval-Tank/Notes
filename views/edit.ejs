@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-full min-h-screen bg-zinc-800 p-10">
+        <h1 class="text-5xl text-white mb-5">Edit your post</h1>
+        <form action="/update/<%= post._id %>" method="post" class="">
+            <textarea name="content" class="block resize-none rounded-md bg-zinc-700 min-w-100 p-3 mb-2 text-white"
+                placeholder="Write your thoughts.." ><%= post.content %></textarea>
+            <input class="block bg-blue-500 text-white p-3 rounded-md" type="submit" value="Update post">
+        </form>
+    </div>
+</body>
+
+</html>
